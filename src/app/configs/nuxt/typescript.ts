@@ -1,3 +1,3 @@
 export default {
-  typeCheck: true,
+  typeCheck: false,
 }

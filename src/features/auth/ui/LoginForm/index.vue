@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { VForm } from '~/shared/ui/form'
-import type { FormSubmitEvent } from '#ui/types'
 import { object, string, type InferType } from 'yup'
+import { reactive } from 'vue'
+import { VForm } from 'shared/ui/form'
+import type { FormSubmitEvent } from '#ui/types'
 
 const schema = object({
   email: string().email('Invalid email').required(),
@@ -23,16 +24,16 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
 <template>
   <VForm
     class="flex w-6/12 flex-col space-y-8 rounded-lg p-14 shadow-xl transition-all duration-200 hover:shadow-2xl"
-    @submit="onSubmit"
     :schema="schema"
     :state="state"
+    @submit="onSubmit"
   >
     <UFormGroup label="Email" name="email">
-      <UInput size="lg" v-model="state.email" />
+      <UInput v-model="state.email" size="lg" />
     </UFormGroup>
 
     <UFormGroup label="Password" name="password">
-      <UInput size="lg" v-model="state.password" type="password" />
+      <UInput v-model="state.password" size="lg" type="password" />
     </UFormGroup>
   </VForm>
 </template>

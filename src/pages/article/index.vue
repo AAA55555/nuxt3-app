@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { HomePage } from '~/views/home'
+import { ArticlePage } from '~/views/article'
 import { Routes } from '~/shared/constants/routes'
 
 useHead({
-  title: Routes.HOME.name,
+  title: Routes.ARTICLE.name,
 })
 </script>
 
 <template>
-  <HomePage />
+  <ArticlePage />
 </template>
