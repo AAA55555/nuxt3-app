@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Routes as routes } from '~/shared/constants/routes'
+import { Routes as routes } from "~/shared/constants/routes";
 </script>
 
 <template>

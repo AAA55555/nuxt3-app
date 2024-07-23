@@ -1,11 +1,10 @@
-import modules from './modules'
-import eslint from './eslint'
-import typescript from './typescript'
-import build from './build'
+import { defineNuxtConfig } from "nuxt/config";
+import modules from "./modules";
+import typescript from "./typescript";
+import eslint from "./eslint";
 
-export default {
+export default defineNuxtConfig({
   modules,
-  eslint,
   typescript,
-  build,
-}
+  ...eslint,
+});

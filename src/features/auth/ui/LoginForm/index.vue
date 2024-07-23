@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import { object, string, type InferType } from 'yup'
-import { reactive } from 'vue'
-import { VForm } from 'shared/ui/form'
-import type { FormSubmitEvent } from '#ui/types'
+import { object, string, type InferType } from "yup";
+import { reactive } from "vue";
+import type { FormSubmitEvent } from "#ui/types";
+import { VForm } from "~/shared/ui/form";
 
 const schema = object({
-  email: string().email('Invalid email').required(),
-  password: string().min(8, 'Must be at least 8 characters').required(),
-})
+  email: string().email("Invalid email").required(),
+  password: string().min(8, "Must be at least 8 characters").required(),
+});
 
-type Schema = InferType<typeof schema>
+type Schema = InferType<typeof schema>;
 
 const state = reactive({
   email: undefined,
   password: undefined,
-})
+});
 
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
-  console.log(event.data)
-}
+  console.log(event.data);
+};
 </script>
 
 <template>

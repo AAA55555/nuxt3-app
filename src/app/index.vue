@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import { computed } from 'vue'
-import { DefaultHeader } from '~/widgets/header'
+import { useRoute } from "vue-router";
+import { computed } from "vue";
+import { DefaultHeader } from "~/widgets/header";
 
-const route = useRoute()
-const layout = computed(() => route?.meta?.layout || 'default-layout')
+const route = useRoute();
+const layout = computed(() => route?.meta?.layout || "default-layout");
 </script>
 
 <template>

@@ -1,3 +1,4 @@
 export default {
-  typeCheck: false,
-}
+  typeCheck: true,
+  strict: true,
+};

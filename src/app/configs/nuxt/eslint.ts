@@ -1,5 +1,10 @@
 export default {
   config: {
-    stylistic: true,
+    stylistic: {
+      indent: "tab",
+      semi: true,
+      singleQuote: true,
+      trailingComma: "all",
+    },
   },
-}
+};
